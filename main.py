@@ -62,6 +62,14 @@ def initPr():
             replace("config.py", dataDir, dataIn )
             replace("config.py", dbDir, dbIn )
 
+# The backup function
+def backup():
+    print("This is the backup funtion")
+
+# The restore function
+def restore():
+    print("This is the restore function")
+
 # The reset function
 def reset():
     print("\"NC-backup\" has been reset!")
@@ -79,9 +87,9 @@ def main(arg):
     elif arg == "--init" or arg == "-i":
         initPr()
     elif arg == "--restore" or arg == "-r":
-        output = "This is restore"
+        restore()
     elif arg == "--backup" or arg == "-b":
-        output = "This is backup"
+        backup()
     elif arg == "--reset" or arg == "-R":
         reset()
     return output
